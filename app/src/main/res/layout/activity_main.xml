@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/im_user_2"
+                    app:shapeAppearanceOverlay="@style/circle" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|center_horizontal">
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:src="@drawable/ic_twitter" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/ic_sparkles" />
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerStory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:background="#cbcbcb" />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+   <androidx.core.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:background="@color/black">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingLeft="15dp"
+                   android:paddingTop="15dp"
+                   android:paddingRight="15dp"
+                   android:background="@color/black">
+
+                   <com.google.android.material.imageview.ShapeableImageView
+                       android:id="@+id/iv_profile"
+                       android:layout_width="45dp"
+                       android:layout_height="45dp"
+                       android:src="@drawable/telegram"
+                       app:shapeAppearanceOverlay="@style/circle" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="15dp"
+                   android:background="@color/black"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Telegram yulduzlari"
+                           android:textColor="@color/white"
+                           android:textSize="15sp"
+                           android:textStyle="bold" />
+
+                       <TextView
+                           android:layout_width="0dp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="5dp"
+                           android:layout_weight="1"
+                           android:text="\@Telegram.. · 1d"
+                           android:textColor="#90B6ADAD"
+                           android:textSize="12sp" />
+
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_more" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="10dp"
+                           android:text="Dunyo kosmisni zabt etayotgan bir paytda ,bizdagi ahvol."
+                           android:textColor="#DAD8D8"
+                           android:textSize="14sp" />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <VideoView
+                           android:id="@+id/video_view"
+                           android:layout_width="350dp"
+                           android:layout_height="200dp"
+                           />
+                   </LinearLayout>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="10dp">
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           android:gravity="center_horizontal|center_vertical">
+
+                           <ImageView
+                               android:layout_width="20dp"
+                               android:layout_height="20dp"
+                               android:layout_marginRight="3dp"
+                               android:src="@drawable/ic_comment" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="4"
+                               android:textColor="@color/white"
+                               android:textSize="15sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           android:gravity="center_horizontal|center_vertical">
+
+                           <ImageView
+                               android:layout_width="20dp"
+                               android:layout_height="20dp"
+                               android:layout_marginRight="3dp"
+                               android:src="@drawable/ic_transform" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="4"
+                               android:textColor="@color/white"
+                               android:textSize="15sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           android:gravity="center_horizontal|center_vertical">
+
+                           <ImageView
+                               android:layout_width="20dp"
+                               android:layout_height="20dp"
+                               android:layout_marginRight="3dp"
+                               android:src="@drawable/ic_love" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="4"
+                               android:textColor="@color/white"
+                               android:textSize="15sp" />
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="0dp"
+                           android:layout_height="match_parent"
+                           android:layout_weight="1"
+                           android:gravity="center_horizontal|center_vertical">
+
+                           <ImageView
+                               android:layout_width="20dp"
+                               android:layout_height="20dp"
+                               android:layout_marginRight="3dp"
+                               android:src="@drawable/ic_upload" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="4"
+                               android:textColor="@color/white"
+                               android:textSize="15sp" />
+                       </LinearLayout>
+                   </LinearLayout>
+
+               </LinearLayout>
+           </LinearLayout>
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerFeed"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+       </LinearLayout>
+
+   </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
